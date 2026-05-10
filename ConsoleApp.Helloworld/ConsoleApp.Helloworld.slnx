@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ConsoleApp.Helloworld/ConsoleApp.Helloworld.csproj" />
+  <Project Path="ConsoleApp.TopLevelDemo/ConsoleApp.TopLevelDemo/ConsoleApp.TopLevelDemo.csproj" Id="90a65dc2-d214-4e87-bb61-eafe90992c62" />
+</Solution>

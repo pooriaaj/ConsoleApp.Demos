@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ConsoleApp.OutputDemo/ConsoleApp.OutputDemo.csproj" />
+  <Project Path="ConsoleApp.UserInputDemo/ConsoleApp.UserInputDemo.csproj" />
+  <Project Path="ConsoleApp.VariablesDemo/ConsoleApp.VariablesDemo.csproj" />
+</Solution>
