@@ -1,29 +1,33 @@
-﻿// Show calculator options / Show menu
-Console.WriteLine("Please select an operation (-1 to exit the program) ");
-Console.WriteLine("1. Addition");
-Console.WriteLine("2. Subtraction");
-Console.WriteLine("3. Multiplication");
-Console.WriteLine("4. Division");
-Console.WriteLine("5. Fibonacci Sequence");
-int choice = Convert.ToInt32(Console.ReadLine());
+﻿// Variable declaration
+int choice = 0;
+int num1, num2 = 0;
 
+// Show calculator options / Show menu
 while (choice != -1)
 {
-
-    Console.Write("Please enter the first number: ");
-    int num1 = Convert.ToInt32(Console.ReadLine());
-
-    Console.Write("Please enter the second number: ");
-    int num2 = Convert.ToInt32(Console.ReadLine());
-
-    double answer = 0;
-
-    if (num1 == 0 || num2 == 0)
+    try
     {
-        Console.WriteLine("One of the numbers is zero, please enter a non-zero number.");
-    }
-    else
-    {
+        Console.Clear();
+        Console.WriteLine("Please select an operation (-1 to exit the program) ");
+        Console.WriteLine("1. Addition");
+        Console.WriteLine("2. Subtraction");
+        Console.WriteLine("3. Multiplication");
+        Console.WriteLine("4. Division");
+        Console.WriteLine("5. Fibonacci Sequence");
+        choice = Convert.ToInt32(Console.ReadLine());
+
+        if (choice == -1)
+        {
+            Console.WriteLine("Exiting the program. Goodbye!");
+            break; // Exit the loop and end the program
+        }
+        Console.Write("Please enter the first number: ");
+        num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Please enter the second number: ");
+        num2 = Convert.ToInt32(Console.ReadLine());
+
+        double answer = 0;
         switch (choice)
         {
             case 1:
@@ -40,7 +44,7 @@ while (choice != -1)
                 break;
             case 4:
                 answer = (double)num1 / num2; // Cast to double for accurate division
-                Console.WriteLine($"The quotient of {num1} and {num2} is: {answer}");
+                    Console.WriteLine($"The quotient of {num1} and {num2} is: {answer}");
                 break;
             case 5:
                 for (int i = num1; i <= num2; i++)
@@ -49,21 +53,24 @@ while (choice != -1)
                 }
                 break;
             default:
-                Console.WriteLine("Invalid choice, please select a valid operation.");
-                break;
-        }
-
-        Console.WriteLine($"The result is: {answer}");
-        Console.WriteLine("Press enter to continue");
-        Console.ReadLine();
-        Console.Clear();
-
-        Console.WriteLine("Please select an operation (-1 to exit the program) ");
-        Console.WriteLine("1. Addition");
-        Console.WriteLine("2. Subtraction");
-        Console.WriteLine("3. Multiplication");
-        Console.WriteLine("4. Division");
-        Console.WriteLine("5. Fibonacci Sequence");
-        choice = Convert.ToInt32(Console.ReadLine());
+                throw new Exception("Invalid choice, please select a valid operation.");
     }
+    // print output 
+    Console.WriteLine($"The result is: {answer}");
 }
+    catch (DivideByZeroException)
+    {
+    Console.WriteLine("Cannot divide by zero");
+}
+    catch (Exception ex)
+    {
+    Console.WriteLine(ex.Message);
+}
+    finally
+    {
+    Console.WriteLine("Press any key to continue.");
+    Console.ReadLine();
+}
+}
+
+Console.WriteLine("******** - Thank you for using the sample calculator! - ********");

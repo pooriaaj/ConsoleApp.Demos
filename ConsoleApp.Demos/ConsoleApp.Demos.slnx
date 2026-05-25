@@ -3,10 +3,13 @@
     <File Path=".editorconfig" />
   </Folder>
   <Project Path="ConsoleApp.ConditionsAndDecisions/ConsoleApp.ConditionsAndDecisions.csproj" Id="4dffa35e-bb0e-4a3f-b107-5008da7e2e58" />
+  <Project Path="ConsoleApp.DateTimeManipulation/ConsoleApp.DateTimeManipulation.csproj" Id="f92edde0-590c-4022-8fa4-f340e5d2c47d" />
+  <Project Path="ConsoleApp.ExceptionHandlingDemo/ConsoleApp.ExceptionHandlingDemo.csproj" Id="10875ab2-4649-4d4a-8d47-70952fb62a23" />
   <Project Path="ConsoleApp.Loops/ConsoleApp.Loops.csproj" Id="84febb7c-9a47-4306-982c-3f1117ba7dc9" />
   <Project Path="ConsoleApp.Operators/ConsoleApp.Operators.csproj" Id="3fc47894-15b6-4e20-af3e-4230d21b4c9e" />
   <Project Path="ConsoleApp.OutputDemo/ConsoleApp.OutputDemo.csproj" />
   <Project Path="ConsoleApp.SampleCalculator/ConsoleApp.SampleCalculator.csproj" Id="47ee773b-adc3-4d1d-80a0-41f6d2c550a9" />
+  <Project Path="ConsoleApp.StringManipulation/ConsoleApp.StringManipulation.csproj" Id="a76e9686-db06-4e0d-ae5a-bb094336211c" />
   <Project Path="ConsoleApp.UserInputDemo/ConsoleApp.UserInputDemo.csproj" />
   <Project Path="ConsoleApp.VariablesDemo/ConsoleApp.VariablesDemo.csproj" />
 </Solution>
