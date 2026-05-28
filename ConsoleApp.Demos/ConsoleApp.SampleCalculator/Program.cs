@@ -7,14 +7,9 @@ while (choice != -1)
 {
     try
     {
-        Console.Clear();
-        Console.WriteLine("Please select an operation (-1 to exit the program) ");
-        Console.WriteLine("1. Addition");
-        Console.WriteLine("2. Subtraction");
-        Console.WriteLine("3. Multiplication");
-        Console.WriteLine("4. Division");
-        Console.WriteLine("5. Fibonacci Sequence");
-        choice = Convert.ToInt32(Console.ReadLine());
+        // Welcome Message
+        Console.Write("Please select an operation (1-5) or -1 to exit:");
+        PrintMenu();
 
         if (choice == -1)
         {
@@ -31,46 +26,96 @@ while (choice != -1)
         switch (choice)
         {
             case 1:
-                answer = num1 + num2;
+                answer = AddNumbers(num1, num2);
                 Console.WriteLine($"The sum of {num1} and {num2} is: {answer}");
                 break;
             case 2:
-                answer = num1 - num2;
+                answer = SubtractNumbers(num1, num2);
                 Console.WriteLine($"The difference between {num1} and {num2} is: {answer}");
                 break;
             case 3:
-                answer = num1 * num2;
+                answer = MultiplyNumbers(num1, num2);
                 Console.WriteLine($"The product of {num1} and {num2} is: {answer}");
                 break;
             case 4:
-                answer = (double)num1 / num2; // Cast to double for accurate division
+                answer = DevideNumbers(num1, num2); // Cast to double for accurate division
                     Console.WriteLine($"The quotient of {num1} and {num2} is: {answer}");
                 break;
             case 5:
-                for (int i = num1; i <= num2; i++)
-                {
-                    answer += i; // This will calculate the sum of the Fibonacci sequence from num1 to num2
-                }
+                answer = Fibonacci(num1, num2);
+                Console.WriteLine($"The Fibonacci result from {num1} to {num2} is: {answer}");
                 break;
             default:
                 throw new Exception("Invalid choice, please select a valid operation.");
     }
     // print output 
     Console.WriteLine($"The result is: {answer}");
-}
+    }
     catch (DivideByZeroException)
     {
     Console.WriteLine("Cannot divide by zero");
-}
+    }
     catch (Exception ex)
     {
     Console.WriteLine(ex.Message);
-}
+    }
     finally
     {
-    Console.WriteLine("Press any key to continue.");
+    Console.WriteLine("Press Enter to continue.");
     Console.ReadLine();
-}
+    }
 }
 
-Console.WriteLine("******** - Thank you for using the sample calculator! - ********");
+    Console.WriteLine("******** - Thank you for using the sample calculator! - ********");
+
+// Methods Definitions
+
+int AddNumbers(int num1, int num2)
+{
+    return num1 + num2;
+}
+int SubtractNumbers(int num1, int num2)
+{
+    return num1 - num2;
+}
+int MultiplyNumbers(int num1, int num2)
+{
+    return num1 * num2;
+}
+double DevideNumbers(int num1, int num2)
+{
+    return num1 / num2;
+}
+
+int Fibonacci(int num1, int num2)
+{
+    int answer = 0;
+
+    int firstNumber = 0;
+    int secondNumber = 1;
+
+    while (firstNumber <= num2)
+    {
+        if (firstNumber >= num1)
+        {
+            answer += firstNumber;
+        }
+
+        int nextNumber = firstNumber + secondNumber;
+        firstNumber = secondNumber;
+        secondNumber = nextNumber;
+    }
+
+    return answer;
+}
+void PrintMenu()
+{
+    Console.Clear();
+    Console.WriteLine("Please select an operation (-1 to exit the program) ");
+    Console.WriteLine("1. Addition");
+    Console.WriteLine("2. Subtraction");
+    Console.WriteLine("3. Multiplication");
+    Console.WriteLine("4. Division");
+    Console.WriteLine("5. Fibonacci Sequence");
+    choice = Convert.ToInt32(Console.ReadLine());
+}
