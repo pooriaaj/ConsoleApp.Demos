@@ -3,6 +3,7 @@
     <File Path=".editorconfig" />
   </Folder>
   <Project Path="ConsoleApp.Arrays/ConsoleApp.Arrays.csproj" Id="8e69319c-f1c0-4aa6-9354-8093440d817e" />
+  <Project Path="ConsoleApp.ClassesDemo/ConsoleApp.ClassesDemo.csproj" Id="2bb4a8eb-65cc-4980-bdd9-379ca8b39476" />
   <Project Path="ConsoleApp.ConditionsAndDecisions/ConsoleApp.ConditionsAndDecisions.csproj" Id="4dffa35e-bb0e-4a3f-b107-5008da7e2e58" />
   <Project Path="ConsoleApp.DateTimeManipulation/ConsoleApp.DateTimeManipulation.csproj" Id="f92edde0-590c-4022-8fa4-f340e5d2c47d" />
   <Project Path="ConsoleApp.ExceptionHandlingDemo/ConsoleApp.ExceptionHandlingDemo.csproj" Id="10875ab2-4649-4d4a-8d47-70952fb62a23" />
