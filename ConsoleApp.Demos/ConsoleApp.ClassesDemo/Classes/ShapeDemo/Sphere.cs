@@ -1,13 +1,15 @@
-﻿namespace ConsoleApp.ClassesDemo
+﻿using ConsoleApp.ClassesDemo.Interfaces;
+
+namespace ConsoleApp.ClassesDemo.Classes.ShapeDemo
 {
     public class Sphere : ICircularShape, I3DShape
     {
         public Sphere(double r)
         {
-            r = Radius;
+            Radius = r;
         }
         public double Radius { get; set; }
-        public double Circumference()
+        public double Circumference() 
         {
             return 4 * Math.PI * Math.PI * Math.Pow(Radius, 3);
         }

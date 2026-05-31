@@ -1,11 +1,13 @@
-﻿namespace ConsoleApp.ClassesDemo
+﻿using ConsoleApp.ClassesDemo.Interfaces;
+
+namespace ConsoleApp.ClassesDemo.Classes.ShapeDemo
 {
     public class Rectangle : Polygon, I2DShape
     {
         public Rectangle(double width, double length)
         {
-            width = Width;
-            length = Length;
+            Width = width;
+            Length = length;
         }
         public double Length { get; set; }
         public override double Area()

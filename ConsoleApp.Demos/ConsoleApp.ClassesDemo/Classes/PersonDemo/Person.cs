@@ -1,6 +1,8 @@
 ﻿using System.Security.Cryptography;
 
-public class Person
+namespace ConsoleApp.ClassesDemo.Classes.PersonDemo;
+
+    public partial class Person
 {
     public Person(string firstName, string lastName, DateTime dateOfBirth, int Age)
     {
@@ -32,10 +34,12 @@ public class Person
     // Field Members
     private string _taxNumber = string.Empty;
     protected string _idNumber = "N/A";
+
     // Method
     public void PrintFullName()
     {
-        Console.WriteLine($"Hello, My name is {FirstName} {LastName} and I was born {Age} years ago :).");
+        var type = GetType().Name;
+        Console.WriteLine($" Data type is {type}. Hello, My name is {FirstName} {LastName} and I was born {Age} years ago :).");
     }
     public void PrintInitials()
     {

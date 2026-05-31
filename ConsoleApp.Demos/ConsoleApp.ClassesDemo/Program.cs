@@ -1,4 +1,5 @@
-﻿using ConsoleApp.ClassesDemo;
+﻿using ConsoleApp.ClassesDemo.Classes.PersonDemo;
+using ConsoleApp.ClassesDemo.Classes.ShapeDemo;
 
 Console.WriteLine("*** Classes and Objects ***");
 

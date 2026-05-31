@@ -1,12 +1,14 @@
-﻿namespace ConsoleApp.ClassesDemo
+﻿using ConsoleApp.ClassesDemo.Interfaces;
+
+namespace ConsoleApp.ClassesDemo.Classes.ShapeDemo
 {
     public class Cuboid : Polygon, I2DShape, I3DShape
     {
         public Cuboid(double width, double length, double height)
         {
-            width = Width;
-            length = Length;
-            height = Height;
+            Width = width;
+            Length = length;
+            Height = height;
         }
         public double Length { get; set; }
         public double Height { get; set; }
